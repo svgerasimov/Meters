@@ -1,0 +1,25 @@
+#services {
+    background: url("../../assets/ptrn.png") center/cover;
+
+
+    .service {
+     
+        transition: all 300ms;
+        border-radius: 30px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 19.4px 0.6px rgba(0, 0, 0, 0.06);
+        min-height: 200px;
+
+        p {
+            font-weight: 100;
+            font-size: $m-size;
+        }
+    }
+
+    .service:hover {
+        background-color: $off-blue;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+}

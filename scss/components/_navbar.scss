@@ -1,0 +1,50 @@
+#navbar{
+    position: relative;
+    color: $off-black;
+    font-size: $m-size;
+
+
+    .navbar {
+
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+
+
+        a.navbar-brand{
+            margin-right: $l-size;
+    
+        }
+        li.nav-item {
+            transition: all 0.3s ease-in-out;
+    
+            a.nav-link {
+                font-weight: 400;
+                color: $off-black;
+            }
+        }
+    
+        li.nav-item:hover {
+            transform: scale(1.1)
+        }
+    
+       
+        .navbar__phone {
+            font-weight: 700;
+            margin-right: $l-size;
+            transition: all 0.3s ease-in-out;
+
+            a {
+                text-decoration: none;
+                color: $off-black;
+            }
+        }
+        .navbar__phone:hover {
+            transform: scale(1.2)
+        }
+    }
+
+
+}
