@@ -1,0 +1,26 @@
+#about {
+    .about__description {
+        margin-top: $xl-size;
+        position: relative;
+        border-radius: 30px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 18px 2px rgba(0, 0, 0, 0.03);
+        padding: 3rem;
+
+        .about__description--logo {
+            position: absolute;
+            left: -2rem;
+            top: -2.65rem;
+            border-radius: 50%;
+            width: 220px;
+            height: 220px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 18px 2px rgba(0, 0, 0, 0.03);
+
+        }
+
+        .about__description--text {
+            font-size: 1.6rem;
+        }
+    }
+}

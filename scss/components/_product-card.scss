@@ -1,0 +1,56 @@
+.product__item {
+    max-width: 320px;
+    .card {
+        position: relative;
+        padding: $m-size;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(230, 230, 230);
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 19.4px 0.6px rgba(0, 0, 0, 0.06);
+
+        .card-body {
+            width: 100%;
+            padding: 0;
+
+            .card-body__actions {
+                border-top: 1px solid #eeeeee;
+            }
+        }
+
+        .card-img-top {
+            width: 60%;
+            max-height: 200px;
+        }
+
+        .card-stars {
+            position: absolute;
+            left: $m-size;
+            display: block;
+        }
+
+        .card-title {
+            margin-top: $l-size;
+        }
+
+        .old-price {
+            font-size: $m-size;
+            color: rgb(128, 128, 128);
+            text-decoration: line-through;
+            line-height: 1.2;   
+        }
+        .new-price {
+            font-size: 2.5rem;
+            color: $off-blue;
+            font-weight: 700;
+            line-height: 1.2;
+            text-align: left;
+
+        }
+    }
+  
+    
+}
+
+
+  

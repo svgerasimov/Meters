@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./css/app.css">
 
     <title>Счетчики</title>
+
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ace86e20f2db20b710a4818330d83472272dc4fd5bafa33e907b2f5cf030ce8d0&amp;width=100%25&amp;height=475&amp;lang=ru_RU&amp;scroll=true;id=mymap"></script>
 </head>
 
 <body>
@@ -75,89 +77,527 @@
 
 
     <!-- СПЕКТР УСЛУГ -->
-
     <section id="services">
         <div class="container text-center text-dark pt-5">
             <h2 class="title">Наш спектр услуг</h2>
             <div class="row">
-                <div class="col-md-4 my-3">
+                <div class="col-lg-4  my-5">
                     <div class="service d-flex align-items-center justify-content-center">
                         <p class="lead">Демонтаж, монтаж, очистка, тестирование средств измерений</p>
                     </div>
                 </div>
-                <div class="col-md-4 my-3">
+                <div class="col-lg-4  my-5">
                     <div class="service d-flex align-items-center justify-content-center">
                         <p class="lead">Поверка СИ Воронежским центром стандартизации, метрологии и сертификации "ФГУ
                             Воронежский ЦСМ"</p>
                     </div>
                 </div>
-                <div class="col-md-4 my-3">
+                <div class="col-lg-4 my-5">
                     <div class="service d-flex align-items-center justify-content-center">
                         <p class="lead">Ремонт, юстировка, настройка, программирование СИ </p>
                     </div>
                 </div>
             </div>
 
-            <div class="row justify-content-between">
-                    <div class="row flex-column">
-                            <div class=" my-3">
-                                <div class="service d-flex align-items-center justify-content-center">
-                                    <p class="lead">Разработка проектной документации</p>
-                                </div>
-                            </div>
-                            <div class=" my-3">
-                                <div class="service d-flex align-items-center justify-content-center">
-                                    <p class="lead">Техническое обслуживание СИ</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row flex-column">
-                            <div class="my-3">
-                                <div class="service d-flex flex-column align-items-center justify-content-center">
-                                    <p class="lead">
-                                        Установка узлов комплексного учета:
-                                        <ul>
-                                            <li>энергоресурсов</li>
-                                            <li>тепловой энергии центрального отопления</li>
-                                            <li>тепловой энергии ГВС</li>
-                                            <li>потребленной холодной воды</li>
-                                            <li>тепловой энергии пара</li>
-                                            <li>сточных вод</li>
-                                            <li>канализации</li>
-                                        </ul>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row flex-column">
-                            <div class=" my-3">
-                                <div class="service d-flex align-items-center justify-content-center">
-                                    <p class="lead">Установка энергосберегающего оборудования (центральное отопление)</p>
-                                </div>
-                            </div>
-            
-                            <div class=" my-3 ">
-                                <div class="service d-flex align-items-center justify-content-center">
-                                    <p class="lead">Поставка СИ и другого оборудования</p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="row align-items-start">
+                <div class="col-lg-4 my-5">
+                    <div class="service d-flex align-items-center justify-content-center">
+                        <p class="lead">Разработка проектной документации</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 my-5">
+                    <div class="service d-flex flex-column align-items-center justify-content-center" style="height: auto; max-height: none">
+                        <p class="lead">Установка узлов комплексного учета: </p>
+                        <ul class="lead">
+                            <li>энергоресурсов</li>
+                            <li>тепловой энергии центрального отопления</li>
+                            <li>тепловой энергии ГВС</li>
+                            <li>потребленной холодной воды</li>
+                            <li>тепловой энергии пара</li>
+                            <li>сточных вод</li>
+                            <li>канализации</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 my-5">
+                    <div class="service d-flex align-items-center justify-content-center">
+                        <p class="lead">Установка энергосберегающего оборудования (центральное отопление)</p>
+                    </div>
+                </div>
             </div>
+            <div class="row justify-content-between last-row">
+                <div class="col-lg-4  my-5">
+                    <div class="service d-flex align-items-center justify-content-center">
+                        <p class="lead">Техническое обслуживание СИ</p>
+                    </div>
+                </div>
 
-           
+                <div class="col-lg-4 my-5">
+                    <div class="service d-flex align-items-center justify-content-center">
+                        <p class="lead">Поставка СИ и другого оборудования</p>
+                    </div>
 
-
-
-
-
-
-
-
-
-
+                </div>
+            </div>
         </div>
         </div>
     </section>
+
+    <!-- ПРЕИМУЩЕСТВА ПРОДУКЦИИ -->
+    <section id="features" class="bg-secondary">
+        <div class="container text-center text-dark pt-5">
+            <h2 class="title">Преимущества нашей продукции</h2>
+
+            <div class="row features__wrapper py-5">
+                <div class="col-md-12">
+                    <div id="features__carousel" class="carousel slide" data-ride="carousel">
+
+                        <ol class="carousel-indicators">
+                            <li data-target="#features__carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#features__carousel" data-slide-to="1"></li>
+                            <li data-target="#features__carousel" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <div class="row justify-content-around">
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center feature">
+                                        <img class="d-block" src="./assets/features/1.png" alt="Image" style="max-width:100%;">
+                                    </div>
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center feature">
+
+                                        <img class="d-block" src="./assets/features/1.png" alt="Image" style="max-width:100%;">
+
+                                    </div>
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center feature">
+
+                                        <img class="d-block" src="./assets/features/1.png" alt="Image" style="max-width:100%;">
+
+                                    </div>
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center feature">
+
+                                        <img class="d-block" src="./assets/features/1.png" alt="Image" style="max-width:100%;">
+
+                                    </div>
+                                </div>
+                                <!--.row-->
+                            </div>
+                            <!--.item-->
+
+                            <div class="carousel-item">
+                                <div class="row  justify-content-around">
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center feature">
+                                        <img class="d-block" src="./assets/features/1.png" alt="Image" style="max-width:100%;">
+                                    </div>
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center feature">
+
+                                        <img class="d-block" src="./assets/features/1.png" alt="Image" style="max-width:100%;">
+
+                                    </div>
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center feature">
+
+                                        <img class="d-block" src="./assets/features/1.png" alt="Image" style="max-width:100%;">
+
+                                    </div>
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center feature">
+
+                                        <img class="d-block" src="./assets/features/1.png" alt="Image" style="max-width:100%;">
+
+                                    </div>
+                                </div>
+                                <!--.row-->
+                            </div>
+                            <!--.item-->
+
+                            <div class="carousel-item">
+                                <div class="row  justify-content-around">
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center feature">
+                                        <img class="d-block" src="./assets/features/1.png" alt="Image" style="max-width:100%;">
+                                    </div>
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center feature">
+
+                                        <img class="d-block" src="./assets/features/1.png" alt="Image" style="max-width:100%;">
+
+                                    </div>
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center feature">
+
+                                        <img class="d-block" src="./assets/features/1.png" alt="Image" style="max-width:100%;">
+
+                                    </div>
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center feature">
+
+                                        <img class="d-block" src="./assets/features/1.png" alt="Image" style="max-width:100%;">
+
+                                    </div>
+                                </div>
+                                <!--.row-->
+                            </div>
+                            <!--.item-->
+
+                        </div>
+                        <!--.carousel-inner-->
+                    </div>
+                    <!--.Carousel-->
+
+                </div>
+            </div>
+
+
+
+
+            <div class="py-5"></div>
+        </div>
+    </section>
+
+    <!-- КАТАЛОГ ПРОДУКЦИИ -->
+    <section id="products">
+        <div class="container text-center text-dark py-5">
+            <h2 class="title">Каталог продукции</h2>
+            <div class="row justify-content-between align-items-center">
+                <div class="product__item col-md-4 my-5">
+                    <div class="card align-items-center">
+                        <img class="card-img-top p-5" src="./assets/$.png" alt="">
+                        <div class="card-body">
+                            <a class="card-stars" href="#">
+                                <img src="./assets/stars.png" alt="">
+                            </a>
+                            <h4 class="card-title">Товар и его характеристики</h4>
+                            <div class="row justify-content-between align-items-center py-4">
+                                <div class="col-4">
+                                    <span class="old-price">199р./шт</span>
+                                </div>
+                                <div class="col-8 text-left">
+                                    <span class="new-price">99р./шт</span>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between align-items-center pt-3 card-body__actions">
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img src="./assets/like.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img src="./assets/compare.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <button class="text-transform-uppercase button--buy">купить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product__item col-md-4 my-5">
+                    <div class="card align-items-center">
+                        <img class="card-img-top p-5" src="./assets/$.png" alt="">
+                        <div class="card-body">
+                            <a class="card-stars" href="#">
+                                <img src="./assets/stars.png" alt="">
+                            </a>
+                            <h4 class="card-title">Товар и его характеристики</h4>
+                            <div class="row justify-content-between align-items-center py-4">
+                                <div class="col-4">
+                                    <span class="old-price">199р./шт</span>
+                                </div>
+                                <div class="col-8 text-left">
+                                    <span class="new-price">99р./шт</span>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between align-items-center pt-3 card-body__actions">
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img src="./assets/like.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img src="./assets/compare.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <button class="text-transform-uppercase button--buy">купить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product__item col-md-4 my-5">
+                    <div class="card align-items-center">
+                        <img class="card-img-top p-5" src="./assets/$.png" alt="">
+                        <div class="card-body">
+                            <a class="card-stars" href="#">
+                                <img src="./assets/stars.png" alt="">
+                            </a>
+                            <h4 class="card-title">Товар и его характеристики</h4>
+                            <div class="row justify-content-between align-items-center py-4">
+                                <div class="col-4">
+                                    <span class="old-price">199р./шт</span>
+                                </div>
+                                <div class="col-8 text-left">
+                                    <span class="new-price">99р./шт</span>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between align-items-center pt-3 card-body__actions">
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img src="./assets/like.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img src="./assets/compare.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <button class="text-transform-uppercase button--buy">купить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product__item col-md-4 my-5">
+                    <div class="card align-items-center">
+                        <img class="card-img-top p-5" src="./assets/$.png" alt="">
+                        <div class="card-body">
+                            <a class="card-stars" href="#">
+                                <img src="./assets/stars.png" alt="">
+                            </a>
+                            <h4 class="card-title">Товар и его характеристики</h4>
+                            <div class="row justify-content-between align-items-center py-4">
+                                <div class="col-4">
+                                    <span class="old-price">199р./шт</span>
+                                </div>
+                                <div class="col-8 text-left">
+                                    <span class="new-price">99р./шт</span>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between align-items-center pt-3 card-body__actions">
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img src="./assets/like.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img src="./assets/compare.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <button class="text-transform-uppercase button--buy">купить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product__item col-md-4 my-5">
+                    <div class="card align-items-center">
+                        <img class="card-img-top p-5" src="./assets/$.png" alt="">
+                        <div class="card-body">
+                            <a class="card-stars" href="#">
+                                <img src="./assets/stars.png" alt="">
+                            </a>
+                            <h4 class="card-title">Товар и его характеристики</h4>
+                            <div class="row justify-content-between align-items-center py-4">
+                                <div class="col-4">
+                                    <span class="old-price">199р./шт</span>
+                                </div>
+                                <div class="col-8 text-left">
+                                    <span class="new-price">99р./шт</span>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between align-items-center pt-3 card-body__actions">
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img src="./assets/like.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img src="./assets/compare.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <button class="text-transform-uppercase button--buy">купить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product__item col-md-4 my-5">
+                    <div class="card align-items-center">
+                        <img class="card-img-top p-5" src="./assets/$.png" alt="">
+                        <div class="card-body">
+                            <a class="card-stars" href="#">
+                                <img src="./assets/stars.png" alt="">
+                            </a>
+                            <h4 class="card-title">Товар и его характеристики</h4>
+                            <div class="row justify-content-between align-items-center py-4">
+                                <div class="col-4">
+                                    <span class="old-price">199р./шт</span>
+                                </div>
+                                <div class="col-8 text-left">
+                                    <span class="new-price">99р./шт</span>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between align-items-center pt-3 card-body__actions">
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img src="./assets/like.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img src="./assets/compare.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <button class="text-transform-uppercase button--buy">купить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- О КОМПАНИИ -->
+    <section id="about" class="bg-secondary">
+        <div class="container text-dark text-center py-5">
+            <h2 class="title">О компании</h2>
+            <div class="about__description row">
+                <div class="about__description--logo p-5 d-none d-lg-flex align-items-center justify-content-center">
+                    <img src="./assets/logo.png" alt="" class="img-fluid">
+                </div>
+                <div class="about__description--text col-12 col-lg-10 offset-lg-2 py-3">
+                    <p>Уже более 20 лет ООО "ВЭК-сервис" оказывает свои услуги в сфере учета тепловой энергии:
+                        осуществляет проектирование, монтаж и обслуживание систем учета, продажу приборов учета,
+                        гарантийный и послегарантийный ремонт приборов учета</p>
+                </div>
+            </div>
+            <div class="py-5"></div>
+        </div>
+    </section>
+
+
+    <!-- БЛОГ -->
+    <section id="blog">
+        <div class="container text-center text-dark py-5">
+            <h2 class="title">Блог</h2>
+
+            <div class="blog__nav row bg-secondary text-left">
+                <div class="row">
+                    <div class="col-12">
+                        <h6 class="subtitle">Статьи</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mt-4 blog__nav--item">
+                        <p class="lead mt-2">Кукурузный силос силосуется просто?!</p>
+                    </div>
+                    <div class="col-md-4 mt-4 blog__nav--item">
+
+                        <p class="lead mt-2">Поздравляем с Новым годом и Рождеством!</p>
+                    </div>
+                    <div class="col-md-4 mt-4 blog__nav--item">
+
+                        <p class="lead mt-2">Применение цельного зерна в кормлении бройлеров</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+     <!-- ФОРМА ОБРАТНОЙ СВЯЗИ -->
+  <section id="contacts" class="bg-secondary">
+        <div class="container text-center py-5">
+          <h2 class="title">Оставьте заявку и получите скидку!</h2>
+          <div class="row pt-5 contacts__form-container align-items-center">
+            <div class="col-lg-10 offset-lg-1">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="contacts__icon bg-white d-none d-md-block">
+                    <img src="./assets/call.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+                <div class="col-md-8 pl-4">
+                  <form>
+                    <div class="form-group">
+                      <input type="text" name="name" class="form-control pl-4" id="name" aria-describedby="name"
+                        placeholder="Имя">
+                    </div>
+                    <div class="form-group">
+                      <input type="tel" name="phone" class="form-control pl-4" id="phone" placeholder="Контактный номер">
+                    </div>
+                    <div class="form-row">
+                      <div class="col-2 form-group form-check" id="toggles">
+                        <input type="checkbox" name="toggle-switcher" id="toggle-switcher" class="ios-toggle" />
+                        <label for="toggle-switcher" class="checkbox-label"></label> <!--  data-off="off" data-on="on" -->
+                      </div>
+                      <div class="col-10">
+                        <div class="contacts__input--data bg-white py-2 text-center text-md-left pl-md-4">
+                          Согласие на обработку персональных данных
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="form-row">
+                      <div id="submit" class="col-lg-4">
+                        <button type="button" class="btn button--submit btn-primary px-5 w-100 d-block">Отправить</button>
+                      </div>
+                      <div class="d-none d-lg-block col-lg-8">
+                        <div class="contacts__input--data bg-white py-2 text-center text-md-left pl-md-4">
+                          Наш менеджер оперативно свяжется с Вами
+                        </div>
+                      </div>
+    
+                    </div>
+    
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- КАРТА -->
+      <section id="mymap"></section>
+
+      <!-- ФУТЕР -->
+      <!-- <footer id="footer">
+          <div class="container text-center text-dark py-5">
+              <div class="row justify-content-center align-items-center">
+                  <div class="footer__addr">
+                    <p>143002, Московская область, Одинцовский район, город Одинцово, Южная улица, д.8, помещение 13</p>
+                    <p>ИНН 2387492749 ОГРН 238472897429</p>
+                  </div>
+                  <div class="footer__tel">
+                    <a href="tel:+74951366700">+7 (495) 136-67-00</a>
+                  </div>
+              </div>
+      </footer> -->
+
+
+
+
+
+
 
 
 

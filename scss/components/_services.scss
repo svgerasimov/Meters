@@ -1,5 +1,7 @@
 #services {
     background: url("../../assets/ptrn.png") center/cover;
+    max-height: 700px;
+    overflow-y: hidden;
 
 
     .service {
@@ -8,13 +10,28 @@
         border-radius: 30px;
         background-color: rgb(255, 255, 255);
         box-shadow: 0px 0px 19.4px 0.6px rgba(0, 0, 0, 0.06);
-        min-height: 200px;
+        height: 150px;
+        max-height: 160px;
+        padding: $m-size;
 
         p {
             font-weight: 100;
             font-size: $m-size;
         }
+
+        ul {
+            list-style: none;
+            padding: 20px;
+            font-size: $m-size;
+            text-align: left;
+
+            li {
+                margin-top: 5px;
+            }
+
+        }
     }
+
 
     .service:hover {
         background-color: $off-blue;
@@ -23,3 +40,10 @@
     }
 
 }
+
+@media (min-width: 767px) { 
+    .last-row {
+        position: relative;
+        top: -210px;
+    }
+ }
